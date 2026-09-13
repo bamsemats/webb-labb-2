@@ -1,0 +1,184 @@
+.task-card {
+  position: relative;
+  background-color: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+/* Corner border priority indicator */
+.task-card.priority-high {
+  border-top: 3px solid var(--danger);
+}
+
+.task-card.priority-normal {
+  border-top: 3px solid var(--accent);
+}
+
+.task-card.priority-low {
+  border-top: 3px solid var(--secondary);
+}
+
+.task-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.task-card.completed {
+  background-color: var(--bg-subtle);
+  border-top-color: var(--border-color);
+  opacity: 0.8;
+}
+
+/* Card Header: Title & Menu */
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.task-title {
+  font-size: 1.025rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+  word-break: break-word;
+}
+
+.task-title.line-through {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+/* Middle Row: Checkbox + Time */
+.card-time-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.task-checkbox-wrap {
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  background-color: var(--surface);
+}
+
+.checkbox:hover {
+  border-color: var(--secondary);
+}
+
+.checkbox.checked {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: white;
+}
+
+.checkbox.checked svg {
+  width: 13px;
+  height: 13px;
+}
+
+.task-time-text {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Bottom Row: Category Icon (left) + Duration */
+.card-duration-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+.task-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.task-duration-text {
+  font-weight: 600;
+}
+
+/* Kebab 3-dots Menu */
+.menu-wrap {
+  position: relative;
+  margin-top: -0.2rem;
+  margin-right: -0.2rem;
+}
+
+.btn-kebab {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  padding: 0.15rem 0.35rem;
+  border-radius: var(--radius-sm);
+  line-height: 1;
+  transition: all var(--transition-fast);
+}
+
+.btn-kebab:hover {
+  background-color: var(--bg-subtle);
+  color: var(--text-main);
+}
+
+.kebab-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 0.35rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 140px;
+  animation: fadeIn 0.15s ease-out;
+}
+
+.dropdown-item {
+  padding: 0.4rem 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-main);
+  border-radius: var(--radius-sm);
+  text-align: left;
+  width: 100%;
+  transition: background-color var(--transition-fast);
+}
+
+.dropdown-item:hover {
+  background-color: var(--bg-subtle);
+}
+
+.dropdown-item.danger {
+  color: var(--danger);
+}
+
+.dropdown-item.danger:hover {
+  background-color: var(--danger-light);
+}
