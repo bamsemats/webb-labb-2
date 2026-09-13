@@ -2,7 +2,7 @@
 
 > **"Din vecka. Ditt hem. Din plan."**
 
-HemPlan är en modern, användarvänlig och komplett Vue 3-applikation utformad för att hjälpa individer, par och familjer att planera, organisera, genomföra och följa upp alla hushållssysslor i vardagen.
+HemPlan är en användarvänlig och komplett Vue 3-applikation utformad för att hjälpa individer, par och familjer att planera, organisera, genomföra och följa upp alla hushållssysslor i vardagen.
 
 Projektet är utvecklat som en individuell uppgift inom kursen för webbutveckling i form av en **modulär Vue 3 Single File Component (SFC) arkitektur** med fristående CSS-moduler byggd med Vite.
 
@@ -148,3 +148,9 @@ UX-funktionalitet där användaren direkt i gränssnittet kan skifta mellan tre 
 3. **🎯 Fokus**: Veckoplanering där dagens datum (dagskolumnen för idag) framhävs med primär linje, förhöjd skugga och färg, medan de sex övriga dagarna tonas ner (`opacity: 0.45; filter: grayscale(45%)`).
 
 Läs en ingående teknisk och UX-mässig redogörelse i [BESKRIVNING.md](BESKRIVNING.md).
+
+---
+
+## 🌐 Publicerad hemsida
+
+Hemsidan publiceras via Github Actions på [Github Pages](https://bamsemats.github.io/webb-labb-2/)
